@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## Write a short comment describing this functions
 
 ## Mirrors makeVector function given in example
 ## 1. Get Matrix
@@ -9,12 +9,14 @@
 ## 3. Get Inverse
 ## 4. Set Inverse
 makeCacheMatrix <- function(x = matrix()) {
+# by default, x is an empty matrix initialised
   inv <- NULL
   
   ## Set Matrix - if a new matrix is keyed in, refresh the cache
   set <- function (y) {
-    x <- y
-    inv <- NULL
+    x <<- y
+    inv <<- NULL
+    print(x)
   }
   
   ## Get Matrix - retrieves stored matrix
